@@ -1,7 +1,7 @@
 # Калькулятор бюджета
 
 ## Ссылка на GitHubPages
-[Смотреть проект](https://smirnov-dev-frontend.github.io/expense-tracker/)
+[Смотреть проект]([https://smirnov-dev-frontend.github.io/expense-tracker/])
 
 ## Технологии
 
