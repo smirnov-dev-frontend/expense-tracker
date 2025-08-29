@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Бюджетный калькулятор</title>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+	<div class="budget-calculator">
+		<h1 class="budget-calculator__title">Интерактивный калькулятор бюджета</h1>
+
+		<form class="budget-calculator__form">
+			<!-- Доходы -->
+			<div class="budget-calculator__section" id="income-section">
+				<label class="budget-calculator__label">Доходы:</label>
+				<input type="number" class="budget-calculator__input" placeholder="Введите доход">
+			</div>
+
+			<!-- Расходы -->
+			<div class="budget-calculator__section" id="expenses-section">
+				<label class="budget-calculator__label">Расходы:</label>
+				<div id="expense-items"></div>
+				<button type="button" id="add-expense">Добавить расход</button>
+			</div>
+
+			<!-- Рассчитать -->
+			<button type="button" class="budget-calculator__submit" id="calculate">Рассчитать</button>
+		</form>
+
+		<!-- Результаты -->
+		<div class="budget-calculator__result">
+			<p id="balance-text">Баланс: 0 ₽</p>
+			<canvas id="expenses-chart"></canvas>
+		</div>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,228 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 40px 20px;
+}
+
+.budget-calculator {
+  background: #fff;
+  padding: 30px;
+  max-width: 650px;
+  width: 100%;
+  border-radius: 12px;
+  -webkit-box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+.budget-calculator__title {
+  font-size: 28px;
+  color: #2f2626;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.budget-calculator__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 20px;
+}
+.budget-calculator__section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+.budget-calculator__section input[type=number], .budget-calculator__section input[type=text] {
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  width: 100%;
+}
+.budget-calculator__section button {
+  padding: 8px 15px;
+  background: #767778;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: background 0.3s;
+  transition: background 0.3s;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.budget-calculator__section button:hover {
+  background: #5a595c;
+}
+.budget-calculator__submit {
+  padding: 12px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #ff7a5c, #ff3d68);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 600;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  -webkit-box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  margin-top: 10px;
+}
+.budget-calculator__submit:hover {
+  -webkit-transform: translateY(-2px);
+      -ms-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.budget-calculator__submit:active {
+  -webkit-transform: translateY(1px);
+      -ms-transform: translateY(1px);
+          transform: translateY(1px);
+  -webkit-box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+}
+.budget-calculator__result {
+  margin-top: 30px;
+  text-align: center;
+}
+.budget-calculator__result p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #2f2626;
+}
+.budget-calculator__result canvas {
+  max-width: 40%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+.budget-calculator .expense-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+.budget-calculator .expense-item input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.budget-calculator .expense-item button {
+  background: #ff3d68;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.budget-calculator .expense-item button:hover {
+  background: #ff1a4f;
+}
+
+@media (max-width: 480px) {
+  .budget-calculator {
+    padding: 20px;
+  }
+  .budget-calculator__title {
+    font-size: 24px;
+  }
+  .budget-calculator__submit {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
